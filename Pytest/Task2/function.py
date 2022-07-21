@@ -1,7 +1,12 @@
 def is_prime(x):
+    if x < 0:
+        return False
     if x == 0 or x == 1:
         return False
-    for i in range(2, x):
-        if not x % i:
-            return False
+    i = 2
+    while i * i <= x:
+                if x % i == 0:
+                    result = False
+                    break
+                i += 1
     return True
